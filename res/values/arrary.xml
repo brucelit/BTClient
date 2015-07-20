@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Demos -->
+<resources>
+    <string-array  name="demosArray">
+      <item>点击使用</item>
+    </string-array>
+</resources>

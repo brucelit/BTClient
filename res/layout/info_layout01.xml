@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<!-- 第一个切换卡 -->
+<ScrollView android:id="@+id/userface01_ScrollView"
+	android:layout_width="fill_parent" 
+	android:layout_height="fill_parent"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp"
+	>
+	
+    <RelativeLayout 
+        android:id="@+id/info_linearLayout01"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+      >
+   
+         <RelativeLayout 
+             android:id="@+id/info_linearLayout02"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+      >
+
+    
+
+    <TextView
+        android:id="@+id/textView_title"
+        android:paddingLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="连接状态："
+        android:textColor="#FFFFFF"
+        android:textSize="18dp" 
+        />
+    
+    <TextView
+        android:id="@+id/title"
+        android:layout_alignBaseline="@id/textView_title"
+        android:layout_toRightOf="@id/textView_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFFFF"
+        android:textSize="18dp" />
+
+    
+
+
+        <Button
+            android:id="@+id/btn_off_on"
+            android:layout_below="@id/textView_title"
+            android:layout_marginTop="9dp"
+            android:layout_marginLeft="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="打开" />
+
+        <Button
+            android:id="@+id/btn_search_div"
+            android:layout_toRightOf="@id/btn_off_on"
+            android:layout_alignBaseline="@id/btn_off_on"
+            android:layout_marginLeft="7dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="配对" />
+
+        <Button
+            android:id="@+id/btn_connect_div"
+             android:layout_toRightOf="@id/btn_search_div"
+             android:layout_alignBaseline="@id/btn_search_div"
+             android:layout_marginLeft="7dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="连接" />
+       
+
+         <Button
+            android:id="@+id/btn_startPc"
+            android:layout_toRightOf="@id/btn_connect_div"
+            android:layout_alignBaseline="@id/btn_connect_div"
+            android:layout_marginLeft="7dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PC端未开启" />
+
+
+        
+        </RelativeLayout>
+        
+    
+    <RelativeLayout 
+        android:id="@+id/info_linearLayout03"
+        android:layout_below="@id/info_linearLayout02"
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#FFFACD"
+      >
+        
+     
+         <TextView
+            
+        android:id="@+id/textView_data"
+        android:paddingLeft="13dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#1C1C1C"
+        android:textSize="23dp" 
+        android:focusableInTouchMode="true" 
+        android:text="运动参数："
+        />
+    
+           <TextView
+           android:layout_marginTop="4dp"
+        android:id="@+id/textView_X_LinearAcceleration1"
+         android:layout_below="@id/textView_data"
+        android:paddingLeft="13dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#1C1C1C"
+        android:textSize="20dp" 
+        android:visibility="visible"
+        android:focusableInTouchMode="true" 
+        android:text="X轴加速度："
+        />
+  
+  <TextView
+        android:id="@+id/textView_X_LinearAcceleration"
+        android:layout_toRightOf="@id/textView_X_LinearAcceleration1"
+        android:layout_alignBaseline="@id/textView_X_LinearAcceleration1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#1C1C1C"
+        android:textSize="20dp" 
+        android:focusableInTouchMode="true" 
+        />
+    
+   
+       <TextView
+           android:layout_marginTop="4dp"
+        android:id="@+id/textView_Y_LinearAcceleration1"
+         android:layout_below="@id/textView_X_LinearAcceleration1"
+        android:paddingLeft="13dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#1C1C1C"
+        android:textSize="20dp" 
+        android:visibility="visible"
+        android:focusableInTouchMode="true" 
+        android:text="Y轴加速度："
+        />
+  
+  <TextView
+        android:id="@+id/textView_Y_LinearAcceleration"
+        android:layout_toRightOf="@id/textView_Y_LinearAcceleration1"
+        android:layout_alignBaseline="@id/textView_Y_LinearAcceleration1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#1C1C1C"
+        android:textSize="20dp" 
+        android:focusableInTouchMode="true" 
+        />
+        
+        
+    
+        
+         <TextView
+        android:id="@+id/textView_Z_LinearAcceleration1"
+        android:layout_marginTop="4dp"
+        android:layout_below="@id/textView_Y_LinearAcceleration1"
+        android:paddingLeft="13dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#1C1C1C"
+        android:textSize="20dp" 
+        android:text="Z轴加速度："
+        />
+        
+         <TextView
+        android:id="@+id/textView_Z_LinearAcceleration"
+        android:layout_toRightOf="@id/textView_Z_LinearAcceleration1"
+        android:layout_alignBaseline="@id/textView_Z_LinearAcceleration1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#1C1C1C"
+        android:textSize="20dp" 
+        android:focusableInTouchMode="true" 
+        />
+         
+         <TextView
+        android:id="@+id/textView_X_Gyro1"
+        android:layout_marginTop="4dp"
+        android:layout_below="@id/textView_Z_LinearAcceleration1"
+        android:paddingLeft="13dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#1C1C1C"
+        android:textSize="20dp" 
+        android:text="X轴陀螺仪："
+        />
+        
+         <TextView
+        android:id="@+id/textView_X_Gyro"
+        android:layout_toRightOf="@id/textView_X_Gyro1"
+        android:layout_alignBaseline="@id/textView_X_Gyro1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#1C1C1C"
+        android:textSize="20dp" 
+        android:focusableInTouchMode="true" 
+        />
+         
+          <TextView
+        android:id="@+id/textView_Y_Gyro1"
+        android:layout_marginTop="4dp"
+        android:layout_below="@id/textView_X_Gyro1"
+        android:paddingLeft="13dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#1C1C1C"
+        android:textSize="20dp" 
+        android:text="Y轴陀螺仪："
+        />
+        
+         <TextView
+        android:id="@+id/textView_Y_Gyro"
+        android:layout_toRightOf="@id/textView_Y_Gyro1"
+        android:layout_alignBaseline="@id/textView_Y_Gyro1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#1C1C1C"
+        android:textSize="20dp" 
+        android:focusableInTouchMode="true" 
+        />
+         
+          <TextView
+        android:id="@+id/textView_Z_Gyro1"
+        android:layout_marginTop="4dp"
+        android:layout_below="@id/textView_Y_Gyro1"
+        android:paddingLeft="13dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#1C1C1C"
+        android:textSize="20dp" 
+        android:text="Z轴陀螺仪："
+        />
+        
+         <TextView
+        android:id="@+id/textView_Z_Gyro"
+        android:layout_toRightOf="@id/textView_Z_Gyro1"
+        android:layout_alignBaseline="@id/textView_Z_Gyro1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#1C1C1C"
+        android:textSize="20dp" 
+        android:focusableInTouchMode="true" 
+        /> 
+         
+         
+         <TextView
+        android:id="@+id/textView_X_magnetometer1"
+        android:layout_marginTop="4dp"
+        android:layout_below="@id/textView_Z_Gyro1"
+        android:paddingLeft="13dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#1C1C1C"
+        android:textSize="20dp" 
+        android:text="X轴磁力计数："
+        />
+        
+         <TextView
+        android:id="@+id/textView_X_magnetometer"
+        android:layout_toRightOf="@id/textView_X_magnetometer1"
+        android:layout_alignBaseline="@id/textView_X_magnetometer1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#1C1C1C"
+        android:textSize="20dp" 
+        android:focusableInTouchMode="true" 
+        />
+         
+          <TextView
+        android:id="@+id/textView_Y_magnetometer1"
+        android:layout_marginTop="4dp"
+        android:layout_below="@id/textView_X_magnetometer1"
+        android:paddingLeft="13dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#1C1C1C"
+        android:textSize="20dp" 
+        android:text="Y轴磁力计数："
+        />
+        
+         <TextView
+        android:id="@+id/textView_Y_magnetometer"
+        android:layout_toRightOf="@id/textView_Y_magnetometer1"
+        android:layout_alignBaseline="@id/textView_Y_magnetometer1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#1C1C1C"
+        android:textSize="20dp" 
+        android:focusableInTouchMode="true" 
+        />
+         
+          <TextView
+        android:id="@+id/textView_Z_magnetometer1"
+        android:layout_marginTop="4dp"
+        android:layout_below="@id/textView_Y_magnetometer1"
+        android:paddingLeft="13dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#1C1C1C"
+        android:textSize="20dp" 
+        android:text="Z轴磁力计数："
+        />
+        
+         <TextView
+        android:id="@+id/textView_Z_magnetometer"
+        android:layout_toRightOf="@id/textView_Z_magnetometer1"
+        android:layout_alignBaseline="@id/textView_Z_magnetometer1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#1C1C1C"
+        android:textSize="20dp" 
+        android:focusableInTouchMode="true" 
+        /> 
+        
+         <TextView
+        android:id="@+id/textView_X_Eulerian1"
+        android:layout_marginTop="4dp"
+        android:layout_below="@id/textView_Z_magnetometer1"
+        android:paddingLeft="13dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#1C1C1C"
+        android:textSize="20dp" 
+        android:text="X轴欧拉角："
+        />
+        
+         <TextView
+        android:id="@+id/textView_X_Eulerian"
+        android:layout_toRightOf="@id/textView_X_Eulerian1"
+        android:layout_alignBaseline="@id/textView_X_Eulerian1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#1C1C1C"
+        android:textSize="20dp" 
+        android:focusableInTouchMode="true" 
+        />
+         
+          <TextView
+        android:id="@+id/textView_Y_Eulerian1"
+        android:layout_marginTop="4dp"
+        android:layout_below="@id/textView_X_Eulerian1"
+        android:paddingLeft="13dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#1C1C1C"
+        android:textSize="20dp" 
+        android:text="Y轴欧拉角："
+        />
+        
+         <TextView
+        android:id="@+id/textView_Y_Eulerian"
+        android:layout_toRightOf="@id/textView_Y_Eulerian1"
+        android:layout_alignBaseline="@id/textView_Y_Eulerian1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#1C1C1C"
+        android:textSize="20dp" 
+        android:focusableInTouchMode="true" 
+        />
+         
+          <TextView
+        android:id="@+id/textView_Z_Eulerian1"
+        android:layout_marginTop="4dp"
+        android:layout_below="@id/textView_Y_Eulerian1"
+        android:paddingLeft="13dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#1C1C1C"
+        android:textSize="20dp" 
+        android:text="Z轴欧拉角："
+        />
+        
+         <TextView
+        android:id="@+id/textView_Z_Eulerian"
+        android:layout_toRightOf="@id/textView_Z_Eulerian1"
+        android:layout_alignBaseline="@id/textView_Z_Eulerian1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#1C1C1C"
+        android:textSize="20dp" 
+        android:focusableInTouchMode="true" 
+        /> 
+         
+        
+    
+</RelativeLayout>
+        
+
+</RelativeLayout>
+    
+</ScrollView>

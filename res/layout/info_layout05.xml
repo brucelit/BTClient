@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+	<RelativeLayout
+		android:id="@+id/info_linearLayout05"
+		android:layout_width="fill_parent" 
+		android:layout_height="fill_parent"
+		xmlns:android="http://schemas.android.com/apk/res/android">
+	
+	    	 <RelativeLayout 
+        android:id="@+id/RelativeLayout1"
+        android:layout_marginTop="30dp"
+	    android:layout_width="250dp" 
+	    android:layout_height="500dp"
+	    >
+        
+
+    <TextView
+        android:id="@+id/textView_PITCH_ANGLE_Angle"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="10dp"
+        android:layout_width="wrap_content" 
+		android:layout_height="wrap_content"
+		android:text="俯仰陀螺仪角度:"
+		android:textSize="20dp"
+   />
+    
+    <EditText
+        android:id="@+id/editText_PITCH_ANGLE_Angle"
+        android:layout_toRightOf="@id/textView_PITCH_ANGLE_Angle"
+        android:layout_alignBaseline="@id/textView_PITCH_ANGLE_Angle"
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content" 
+		android:layout_height="wrap_content"
+		android:textSize="20dp"
+		android:text="3000"
+		android:inputType="number"
+        />
+    
+    
+
+        
+         <TextView             
+        android:id="@+id/textView_PITCH_ANGLE_Velocity"
+        android:layout_below="@id/textView_PITCH_ANGLE_Angle"
+        android:layout_marginTop="30dp"
+        android:paddingLeft="10dp"
+        android:layout_width="wrap_content" 
+		android:layout_height="wrap_content"
+		android:text="俯仰陀螺仪角速度:"
+		android:textSize="20dp"
+   />
+    
+    <EditText
+        android:id="@+id/editText_PITCH_ANGLE_Velocity"
+        android:layout_toRightOf="@id/textView_PITCH_ANGLE_Velocity"
+        android:layout_alignBaseline="@id/textView_PITCH_ANGLE_Velocity"
+        android:layout_width="wrap_content" 
+		android:layout_height="wrap_content"
+		android:textSize="20dp"
+		android:text="3000"
+		android:inputType="number"
+        />
+    
+    
+    <TextView
+        android:id="@+id/textView_ROLL_ANGLE_Angle"
+        android:layout_below="@id/textView_PITCH_ANGLE_Velocity"
+        android:layout_marginTop="30dp"
+        android:paddingLeft="10dp"
+        android:layout_width="wrap_content" 
+		android:layout_height="wrap_content"
+		android:text="横滚陀螺仪角度:"
+		android:textSize="20dp"
+   />
+    
+    <EditText
+        android:id="@+id/editText_ROLL_ANGLE"
+        android:layout_toRightOf="@id/textView_ROLL_ANGLE_Angle"
+        android:layout_alignBaseline="@id/textView_ROLL_ANGLE_Angle"
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content" 
+		android:layout_height="wrap_content"
+		android:textSize="20dp"
+		android:text="3000"
+		android:inputType="number"
+        />
+    
+    
+
+        
+         <TextView             
+        android:id="@+id/textView_ROLL_ANGLE_Velocity"
+        android:layout_below="@id/textView_ROLL_ANGLE_Angle"
+        android:layout_marginTop="30dp"
+        android:paddingLeft="10dp"
+        android:layout_width="wrap_content" 
+		android:layout_height="wrap_content"
+		android:text="横滚陀螺仪角速度:"
+		android:textSize="20dp"
+   />
+    
+    <EditText
+        android:id="@+id/editText_ROLL_ANGLE_Velocity"
+        android:layout_toRightOf="@id/textView_ROLL_ANGLE_Velocity"
+        android:layout_alignBaseline="@id/textView_ROLL_ANGLE_Velocity"
+        android:layout_width="wrap_content" 
+		android:layout_height="wrap_content"
+		android:textSize="20dp"
+		android:text="3000"
+		android:inputType="number"
+        />
+    
+    
+    
+    <TextView
+        android:id="@+id/textView_YAW_ANGLE_Angle"
+        android:layout_below="@id/textView_ROLL_ANGLE_Velocity"
+        android:layout_marginTop="30dp"
+        android:paddingLeft="10dp"
+        android:layout_width="wrap_content" 
+		android:layout_height="wrap_content"
+		android:text="航向陀螺仪角度:"
+		android:textSize="20dp"
+   />
+    
+    <EditText
+        android:id="@+id/editText_YAW_ANGLE_Angle"
+        android:layout_toRightOf="@id/textView_YAW_ANGLE_Angle"
+        android:layout_alignBaseline="@id/textView_YAW_ANGLE_Angle"
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content" 
+		android:layout_height="wrap_content"
+		android:textSize="20dp"
+		android:text="3000"
+		android:inputType="number"
+        />
+    
+    
+        
+     <TextView             
+        android:id="@+id/textView_YAW_ANGLE_Velocity"
+        android:layout_below="@id/textView_YAW_ANGLE_Angle"
+        android:layout_marginTop="30dp"
+        android:paddingLeft="10dp"
+        android:layout_width="wrap_content" 
+		android:layout_height="wrap_content"
+		android:text="航向陀螺仪角速度:"
+		android:textSize="20dp"
+   />
+    
+    <EditText
+        android:id="@+id/editText_YAW_ANGLE_Velocity"
+        android:layout_toRightOf="@id/textView_YAW_ANGLE_Velocity"
+        android:layout_alignBaseline="@id/textView_YAW_ANGLE_Velocity"
+        android:layout_width="wrap_content" 
+		android:layout_height="wrap_content"
+		android:textSize="20dp"
+		android:text="3000"
+		android:inputType="number"
+        />
+    
+    
+       
+	  
+</RelativeLayout>
+
+	 <RelativeLayout 
+        android:id="@+id/RelativeLayout2"
+        android:layout_toRightOf="@id/RelativeLayout1"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="10dp"
+	    android:layout_width="100dp" 
+	    android:layout_height="500dp"
+	    >
+    
+         <Button
+            android:id="@+id/btn_PITCH_ANGLE_Angle"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="13dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="发送" 
+            />
+	      
+	             
+	      <Button
+            android:id="@+id/btn_PITCH_ANGLE_Velocity"
+            android:layout_marginTop="9dp"
+            android:layout_marginRight="10dp"
+            android:layout_below="@id/btn_PITCH_ANGLE_Angle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="发送" 
+            />
+	      
+	      
+	      <Button
+            android:id="@+id/btn_ROLL_ANGLE_Angle"
+            android:layout_below="@id/btn_PITCH_ANGLE_Velocity"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="9dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="发送" 
+            />
+	             
+	      <Button
+            android:id="@+id/btn_ROLL_ANGLE_Velocity"
+            android:layout_below="@id/btn_ROLL_ANGLE_Angle"
+            android:layout_marginTop="9dp"
+            android:layout_marginRight="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="发送" 
+            />
+	      
+	            <Button
+            android:id="@+id/btn_YAW_ANGLE_Angle"
+            android:layout_below="@id/btn_ROLL_ANGLE_Velocity"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="9dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="发送" 
+            />
+	             
+	      <Button
+            android:id="@+id/btn_YAW_ANGLE_Velocity"
+            android:layout_below="@id/btn_YAW_ANGLE_Angle"
+            android:layout_marginTop="9dp"
+            android:layout_marginRight="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="发送" 
+            />
+        
+	     </RelativeLayout>
+	     
+	 
+	 </RelativeLayout>

@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<!-- 第二个切换卡 -->
+
+	<RelativeLayout
+		android:id="@+id/info_linearLayout03"
+		android:layout_width="fill_parent" 
+		android:layout_height="fill_parent"
+		xmlns:android="http://schemas.android.com/apk/res/android">
+
+	
+	<RelativeLayout 
+	    android:id="@+id/RelativeLayout4"
+	    android:layout_width="180dp" 
+	    android:layout_height="200dp"
+	    android:background="#FFFFFF"
+	    >
+
+     <TextView 
+        android:id="@+id/textView_motor2_setforward"
+        android:layout_marginTop="35dp"
+        android:paddingLeft="35dp"
+        android:text="向前速度："
+        android:textSize="20dp"
+        android:textColor="#1C1C1C"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+    
+    <EditText 
+        android:id="@+id/editText_motor2_setforward"
+        android:layout_toRightOf="@id/textView_motor2_setforward"
+        android:layout_alignBaseline="@id/textView_motor2_setforward"
+        android:textSize="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:text="1"
+        />
+    
+    <TextView 
+        android:id="@+id/textView_motor2_setbackward"
+        android:layout_marginTop="75dp"
+        android:paddingLeft="35dp"
+        android:layout_below="@id/textView_motor2_setforward"
+        android:text="向后速度："
+        android:textSize="20dp"
+        android:textColor="#1C1C1C"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+    
+    <EditText 
+        android:id="@+id/editText_motor2_setbackward"
+        android:layout_toRightOf="@id/textView_motor2_setbackward"
+        android:layout_alignBaseline="@id/textView_motor2_setbackward"
+        android:textSize="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-1"
+        />
+
+
+</RelativeLayout>
+ 
+//页面第二个部分
+	<RelativeLayout 
+	    android:id="@+id/RelativeLayout5"
+	    android:layout_alignParentTop="true"
+	    android:layout_toRightOf="@id/RelativeLayout4"
+	    android:layout_width="fill_parent" 
+	    android:layout_height="200dp"
+	    android:background="#FFFFFF"
+	    >
+    
+	    <Button 
+        android:id="@+id/button_motor2_forward"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/forward"
+        />
+    
+    
+    <Button 
+        android:layout_below="@id/button_motor2_forward"
+        android:layout_marginTop="10dp"
+        android:layout_alignLeft="@id/button_motor2_forward"
+        android:id="@+id/button_motor2_stop"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/stop"
+        />
+
+    
+    <Button 
+        android:layout_below="@id/button_motor2_stop"
+        android:layout_alignLeft="@id/button_motor2_stop"
+        android:layout_marginTop="10dp"
+        android:id="@+id/button_motor2_backward"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/backward"
+        />
+	    
+	    </RelativeLayout>
+	    
+//页面第三个部分	
+ <RelativeLayout 
+        android:id="@+id/RelativeLayout6"
+        android:layout_below="@id/RelativeLayout4"
+          android:layout_marginTop="30dp"
+	    android:layout_width="fill_parent" 
+	    android:layout_height="wrap_content"
+	    android:background="#F8F8FF"
+	    >
+    
+<TextView 
+    android:id="@+id/textView_motor2"
+    android:layout_centerHorizontal="true"
+    android:layout_width="wrap_content" 
+    android:layout_height="wrap_content" 
+    android:layout_alignParentTop="true"
+    android:text="电机参数"
+    android:textColor="#1C1C1C"
+    android:textSize="18dp"
+    />
+
+//电机参数pmw的设置
+<TextView 
+    android:id="@+id/textView_motor2_PMW"
+    android:layout_below="@id/textView_motor2"
+    android:layout_marginTop="40px"
+    android:layout_width="wrap_content" 
+    android:layout_height="wrap_content" 
+    android:layout_alignParentLeft="true"
+    android:text="电机PMW参数范围："
+    android:textColor="#1C1C1C"
+    android:textSize="14dp"
+    />
+    
+<EditText 
+    android:id="@+id/editText_motor2_PMW_min"
+    android:layout_below="@id/textView_motor2"
+    android:layout_alignBaseline="@id/textView_motor2_PMW"   
+    android:layout_toRightOf="@id/textView_motor2_PMW"
+    android:layout_width="wrap_content" 
+    android:layout_height="wrap_content" 
+    android:textSize="14dp"
+    android:inputType="number"
+    />
+
+<TextView 
+    android:id="@+id/textView_motor2_PMW_1"
+    android:layout_below="@id/textView_motor2"
+    android:layout_width="wrap_content" 
+    android:layout_height="wrap_content" 
+    android:layout_alignBaseline="@id/editText_motor2_PMW_min"   
+    android:layout_toRightOf="@id/editText_motor2_PMW_min"
+    android:text="至"
+    android:textColor="#1C1C1C"
+    android:textSize="14dp"
+    />
+
+<EditText 
+    android:id="@+id/editText_motor2_PMW_max"
+    android:layout_below="@id/textView_motor2"
+    android:layout_alignBaseline="@id/textView_motor2_PMW_1"   
+    android:layout_toRightOf="@id/textView_motor2_PMW_1"  
+    android:layout_width="wrap_content" 
+    android:layout_height="wrap_content" 
+    android:textSize="14dp"
+    android:inputType="number"
+    />
+    
+
+
+
+<SeekBar        
+    android:id="@+id/seekBar_motor2_PMW" 
+    android:layout_below="@id/editText_motor2_PMW_max"
+    android:layout_marginTop="14px"
+    android:layout_width="fill_parent" 
+    android:layout_height="wrap_content" 
+/> 
+
+<TextView 
+    android:id="@+id/textView_motor2_PMW_2" 
+    android:layout_below="@id/seekBar_motor2_PMW"
+    android:layout_width="wrap_content" 
+    android:layout_height="wrap_content" 
+    android:textSize="14dp"
+    android:layout_alignParentLeft="true"
+    android:text="电机参数PMW当前值："
+    android:textColor="#1C1C1C"
+/> 
+
+<TextView 
+    android:id="@+id/textView_motor2_PMW_progress" 
+    android:layout_below="@id/seekBar_motor2_PMW"
+    android:layout_width="wrap_content" 
+    android:layout_height="wrap_content" 
+    android:textSize="14dp"
+    android:layout_toRightOf="@id/textView_motor2_PMW_2"
+    android:text="0"
+    android:textColor="#1C1C1C"
+/> 
+
+
+
+
+    
+	  </RelativeLayout>
+	  
+	</RelativeLayout>
