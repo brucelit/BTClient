@@ -194,17 +194,15 @@
     android:textColor="#1C1C1C"
 /> 
 
-<TextView 
-    android:id="@+id/textView_motor3_PMW_progress" 
+<EditText
+    android:id="@+id/editText_motor3_PMW_progress" 
     android:layout_below="@id/seekBar_motor3_PMW"
     android:layout_width="wrap_content" 
     android:layout_height="wrap_content" 
     android:textSize="14dp"
     android:layout_toRightOf="@id/textView_motor3_PMW_2"
-    android:text="0"
     android:textColor="#1C1C1C"
 /> 
-
 
 
 

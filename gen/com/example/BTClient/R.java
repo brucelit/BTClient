@@ -76,6 +76,7 @@ public final class R {
         public static final int editText_motor2_setforward=0x7f06005b;
         public static final int editText_motor3_PMW_max=0x7f06007a;
         public static final int editText_motor3_PMW_min=0x7f060078;
+        public static final int editText_motor3_PMW_progress=0x7f06007d;
         public static final int editText_motor3_setbackward=0x7f060070;
         public static final int editText_motor3_setforward=0x7f06006e;
         public static final int info_include01=0x7f060002;
@@ -163,7 +164,6 @@ public final class R {
         public static final int textView_motor3_PMW=0x7f060077;
         public static final int textView_motor3_PMW_1=0x7f060079;
         public static final int textView_motor3_PMW_2=0x7f06007c;
-        public static final int textView_motor3_PMW_progress=0x7f06007d;
         public static final int textView_motor3_setbackward=0x7f06006f;
         public static final int textView_motor3_setforward=0x7f06006d;
         public static final int textView_title=0x7f06000a;

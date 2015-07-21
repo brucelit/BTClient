@@ -105,7 +105,8 @@ public class Controller extends Activity implements View.OnClickListener {
 	                 editText_motor3_setforward,editText_motor3_stop,editText_motor3_setbackward, 
 	                 editText_motor3_PMW_min,editText_motor3_PMW_max,
 	                 editText_YAW_ANGLE_Angle,editText_ROLL_ANGLE_Angle,editText_YAW_ANGLE_Velocity,
-	                 editText_ROLL_ANGLE_Velocity,editText_PITCH_ANGLE_Angle,editText_PITCH_ANGLE_Velocity
+	                 editText_ROLL_ANGLE_Velocity,editText_PITCH_ANGLE_Angle,editText_PITCH_ANGLE_Velocity,
+	                 editText_motor3_PMW_progress
 	                 ;
 	
 	private SeekBar seekBar_motor1,
@@ -125,7 +126,8 @@ public class Controller extends Activity implements View.OnClickListener {
                      textView_motor2_PMW,textView_motor2_PMW_1,textView_motor2_PMW_2,textView_motor2_PMW_progress,
                      
                      textView_motor3_setforward,textView_motor3_stop,textView_motor3_setbackward,     
-                     textView_motor3_PMW,textView_motor3_PMW_1,textView_motor3_PMW_2,textView_motor3_PMW_progress,
+                     textView_motor3_PMW,textView_motor3_PMW_1,textView_motor3_PMW_2,
+                     //textView_motor3_PMW_progress,
                      
                       textView_PITCH_ANGLE_Angle,textView_PITCH_ANGLE_Velocity,  
                       textView_ROLL_ANGLE_Angle,textView_ROLL_ANGLE_Velocity,
@@ -148,6 +150,8 @@ public class Controller extends Activity implements View.OnClickListener {
 		 fifthPage();
 	     initData();
 	     initBluetooth();
+	   //  int motor=Integer.parseInt(textView_motor1_D_progress.getText().toString());
+	  //   seekBar_motor1.setProgress(motor);
 	        registerReciver();
 		tabHost=(TabHost)findViewById(R.id.tabhost_info1);
     	tabHost.setup(); 
@@ -302,14 +306,16 @@ public class Controller extends Activity implements View.OnClickListener {
 			button_motor3_backward.setOnClickListener(new MotorButtonListener());
 			 seekBar_motor3_PMW= (SeekBar)  findViewById(R.id.seekBar_motor3_PMW);
 			 seekBar_motor3_PMW.setOnSeekBarChangeListener(new  Motor3_PMW_SeekBarChangeListener());
+			 
 			 textView_motor3_PMW=(TextView)  findViewById(R.id.textView_motor3_PMW);
 			 textView_motor3_PMW_1=(TextView)  findViewById(R.id.textView_motor3_PMW_1);
 			 editText_motor3_PMW_min=(EditText)  findViewById(R.id.editText_motor3_PMW_min);
 			 editText_motor3_PMW_max=(EditText)  findViewById(R.id.editText_motor3_PMW_max);
 			 editText_motor3_PMW_min.setText("0");
-			 editText_motor3_PMW_max.setText("100");
+			 editText_motor3_PMW_max.setText("150");
 			 textView_motor3_PMW_2=(TextView)  findViewById(R.id.textView_motor3_PMW_2);
-			 textView_motor3_PMW_progress= (TextView)  findViewById(R.id.textView_motor3_PMW_progress);
+			 editText_motor3_PMW_progress= (EditText)  findViewById(R.id.editText_motor3_PMW_progress);
+			 editText_motor3_PMW_progress.setText("150");
 	    }
 
 	  private void fifthPage() {
@@ -484,7 +490,7 @@ public class Controller extends Activity implements View.OnClickListener {
 	    			 seekBar_motor3_PMW.setMax(Integer.parseInt(editText_motor3_PMW_max.getText().toString())
 	    					 -Integer.parseInt(editText_motor3_PMW_min.getText().toString()));
 	    			 progress = progress+ Integer.parseInt(editText_motor3_PMW_min.getText().toString().trim());
-	    			 textView_motor3_PMW_progress.setText(""+progress);
+	    			 editText_motor3_PMW_progress.setText(""+progress);
 	    			 send_flat=8;
 	    			 ServerRunnable serverRunnable =new ServerRunnable();
 	    			 serverRunnable.run(progress,send_flat);
@@ -612,25 +618,25 @@ public class Controller extends Activity implements View.OnClickListener {
 	 	     	 	motor3_setbackward = preferences.getInt("editText_motor3_setbackward", -1), 
 	 	     	 	motor1 = preferences.getInt("motor1", 0), 
 	 		    	motor1_min = preferences.getInt("motor1_min", 0), 
-	 		    	motor1_max = preferences.getInt("motor1_max", 100),	    
+	 		    	motor1_max = preferences.getInt("motor1_max", 150),	    
 	      			motor1_PMW = preferences.getInt("motor1_PMW", 0), 
 	    	        motor1_PMW_min = preferences.getInt("motor1_PMW_min", 0), 
-	    	        motor1_PMW_max = preferences.getInt("motor1_PMW_max", 100),	      	
+	    	        motor1_PMW_max = preferences.getInt("motor1_PMW_max", 150),	      	
 	    	        motor1_P = preferences.getInt("motor1_P", 0), 
 	    	        motor1_P_min = preferences.getInt("motor1_P_min", 0), 
-	      	        motor1_P_max = preferences.getInt("motor1_P_max", 100),
+	      	        motor1_P_max = preferences.getInt("motor1_P_max", 150),
 	      	        motor1_I = preferences.getInt("motor1_I", 0), 
 	    	        motor1_I_min = preferences.getInt("motor1_I_min", 0), 
-	    	    	motor1_I_max = preferences.getInt("motor1_I_max", 100),	  
+	    	    	motor1_I_max = preferences.getInt("motor1_I_max", 150),	  
                     motor1_D = preferences.getInt("motor1_D", 0), 
 	    	        motor1_D_min = preferences.getInt("motor1_D_min", 0), 
-	    	    	motor1_D_max = preferences.getInt("motor1_D_max", 100),	  
+	    	    	motor1_D_max = preferences.getInt("motor1_D_max", 150),	  
 	    	     	motor2_PMW = preferences.getInt("motor2_PMW", 0), 
 	    	        motor2_PMW_min = preferences.getInt("motor2_PMW_min", 0), 
-	    	        motor2_PMW_max = preferences.getInt("motor2_PMW_max", 100),	      	
+	    	        motor2_PMW_max = preferences.getInt("motor2_PMW_max", 150),	      	
 	    	    	motor3_PMW = preferences.getInt("motor3_PMW", 0), 
 	    	        motor3_PMW_min = preferences.getInt("motor3_PMW_min", 0), 
-	    	    	motor3_PMW_max = preferences.getInt("motor3_PMW_max", 100),  
+	    	    	motor3_PMW_max = preferences.getInt("motor3_PMW_max", 150),  
 	                YAW_ANGLE_Velocity= preferences.getInt("YAW_ANGLE_Velocity", 3000), 
 	                YAW_ANGLE_Angle= preferences.getInt("YAW_ANGLE_Angle", 3000),
 	                ROLL_ANGLE_Velocity= preferences.getInt("ROLL_ANGLE_Velocity", 3000),
@@ -643,27 +649,32 @@ public class Controller extends Activity implements View.OnClickListener {
 	                editText_motor1_PMW_max.setText(motor1_PMW_max + "");
 	                textView_motor1_PMW_progress.setText(motor1_PMW + "");
 	        		editText_motor1_PMW_min.setText(motor1_PMW_min + "");
+	        		editText_motor1_P_max.setText(motor1_P_max + "");
+			        textView_motor1_P_progress.setText(motor1_P + "");
+			        editText_motor1_P_min.setText(motor1_P_min + "");
+			        editText_motor1_I_max.setText(motor1_I_max + "");
+			        textView_motor1_I_progress.setText(motor1_I + "");
+			        editText_motor1_I_min.setText(motor1_I_min + "");
+			        editText_motor1_D_max.setText(motor1_D_max + "");
+			        textView_motor1_D_progress.setText(motor1_D + "");
+			        editText_motor1_D_min.setText(motor1_D_min + "");
+			        editText_motor1_max.setText(motor1_max + "");
+			        textView_motor1_progress.setText(motor1 + "");
+			        editText_motor1_min.setText(motor1_min + "");
+	        		
 	        	    editText_motor3_setforward.setText(motor3_setforward + "");
 		            editText_motor3_setbackward.setText(motor3_setbackward + "");
 		            editText_motor3_PMW_max.setText(motor3_PMW_max + "");
-		            textView_motor3_PMW_progress.setText(motor3_PMW + "");
+		            editText_motor3_PMW_progress.setText(motor3_PMW + "");
 		            editText_motor3_PMW_min.setText(motor3_PMW_min + "");
+		            
 		            editText_motor2_setforward.setText(motor2_setforward + "");
 		            editText_motor2_setbackward.setText(motor2_setbackward + "");
 			        editText_motor2_PMW_max.setText(motor2_PMW_max + "");
 			        textView_motor2_PMW_progress.setText(motor2_PMW + "");
 			        editText_motor2_PMW_min.setText(motor2_PMW_min + "");
 			        
-			        editText_motor1_setforward.setText(motor1_setforward + "");
-	                editText_motor1_setbackward.setText(motor1_setbackward + "");
-	                editText_motor1_P_max.setText(motor1_P_max + "");
-	                textView_motor1_P_progress.setText(motor1_P + "");
-	        		editText_motor1_P_min.setText(motor1_P_min + "");
-	        		 editText_motor1_setforward.setText(motor1_setforward + "");
-		                editText_motor1_setbackward.setText(motor1_setbackward + "");
-		                editText_motor1_PMW_max.setText(motor1_PMW_max + "");
-		                textView_motor1_PMW_progress.setText(motor1_PMW + "");
-		        		editText_motor1_PMW_min.setText(motor1_PMW_min + "");
+	
 		        		editText_YAW_ANGLE_Angle.setText(YAW_ANGLE_Angle + "");
 		        		editText_ROLL_ANGLE_Angle.setText(ROLL_ANGLE_Angle + "");
 		        		editText_PITCH_ANGLE_Angle.setText(PITCH_ANGLE_Angle + "");
@@ -692,9 +703,7 @@ public class Controller extends Activity implements View.OnClickListener {
 	    					- Integer.parseInt(editText_motor1_D_min.getText()
 	    							.toString().trim()));
 	        		
-	        		seekBar_motor1.setProgress(motor1_D
-	    					- Integer.parseInt(editText_motor1_min.getText()
-	    							.toString().trim()));
+	        		seekBar_motor1.setProgress(motor1_PMW);
 	        		
 	        			Toast.makeText(Controller.this, "已读出数据", 5000).show();
 	        }
@@ -752,7 +761,7 @@ public class Controller extends Activity implements View.OnClickListener {
 		    							.toString().trim()));
 		    			   editor.putInt(
 			    					"motor3_PMW",
-			    					Integer.parseInt(textView_motor3_PMW_progress.getText()
+			    					Integer.parseInt(editText_motor3_PMW_progress.getText()
 			    							.toString().trim()));
 			    			editor.putInt(
 			    					"motor3_PMW_min",
@@ -826,8 +835,7 @@ public class Controller extends Activity implements View.OnClickListener {
 				    					"ROLL_ANGLE_Angle",
 				    					Integer.parseInt(editText_ROLL_ANGLE_Angle.getText()
 				    							.toString().trim()));
-
-	    			
+				    			
 	    			editor.commit();
 	    			Toast.makeText(Controller.this, "已存入数据", 5000).show();
 	        }
@@ -1133,7 +1141,7 @@ public class Controller extends Activity implements View.OnClickListener {
 	                            Toast.makeText(context, "配对信息" + device.getName(), 5000).show();
 	                            mDevice = device;
 	                        } catch (Exception e) {
-	                            Toast.makeText(context, "请求连接错误...", 1000).show();
+	                            Toast.makeText(context, "请求连接错误...", 1500).show();
 	                        }
 	                    }
 	                }
@@ -1196,26 +1204,25 @@ public class Controller extends Activity implements View.OnClickListener {
 	    					motor_button_data=Integer.parseInt(editText_PITCH_ANGLE_Angle.getText().toString().trim());
 	    					send_flat=9;
 	    				}
-	    				if(v==btn_ROLL_ANGLE_Angle)
-	    				{
-	    					motor_button_data=Integer.parseInt(editText_ROLL_ANGLE_Angle.getText().toString().trim());
-	    					send_flat=10;
-	    				}
-	    				if(v==btn_YAW_ANGLE_Angle)
-	    				{
-	    					motor_button_data=Integer.parseInt(editText_YAW_ANGLE_Angle.getText().toString().trim());
-	    					send_flat=11;
-	    				}
 	    				if(v==btn_PITCH_ANGLE_Velocity)
 	    				{
 	    					motor_button_data=Integer.parseInt(editText_PITCH_ANGLE_Velocity.getText().toString().trim());
-	    					send_flat=12;
+	    					send_flat=10;
+	    				}
+	    				if(v==btn_ROLL_ANGLE_Angle)
+	    				{
+	    					motor_button_data=Integer.parseInt(editText_ROLL_ANGLE_Angle.getText().toString().trim());
+	    					send_flat=11;
 	    				}
 	    				if(v==btn_ROLL_ANGLE_Velocity)
 	    				{
 	    					motor_button_data=Integer.parseInt(editText_ROLL_ANGLE_Velocity.getText().toString().trim());
+	    					send_flat=12;
+	    				}
+	    				if(v==btn_YAW_ANGLE_Angle)
+	    				{
+	    					motor_button_data=Integer.parseInt(editText_YAW_ANGLE_Angle.getText().toString().trim());
 	    					send_flat=13;
-	    					
 	    				}
 	    				if(v==btn_YAW_ANGLE_Velocity)
 	    				{

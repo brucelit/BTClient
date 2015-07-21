@@ -110,7 +110,7 @@ public class Util {
 				Log.e("ºá¹öÍÓÂİÒÇ½ÇËÙ¶È","true");
 				break;	
 			case 13:
-				c[2] = (byte) (0x07);
+				c[2] = (byte) (0x06);
 				c[4] =  d[0];
 				c[5] =  d[1];
 				Log.e("º½ÏòÍÓÂİÒÇ½Ç¶È","true");
